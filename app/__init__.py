@@ -1,5 +1,6 @@
 from flask import Flask, json, jsonify
 from flask_swagger import swagger
+from requests import put, get
 from app import constants as c
 
 app = Flask(__name__)
@@ -27,6 +28,8 @@ def not_found(error):
     )
     return response
 
+
+put('http://virtualskin.local:8080/teapot', data={'data': 'Remember the milk'}).json()
 
 from app.limb import limb
 
