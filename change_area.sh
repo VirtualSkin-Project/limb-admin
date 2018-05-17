@@ -4,4 +4,4 @@ pkill -f module.py
 
 echo "$1" > ~/.vs_module
 
-systemctl
+systemctl restart vsmodule
