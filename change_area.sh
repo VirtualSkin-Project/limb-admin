@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 
-pkill -f module.py
-
 echo "$1" > ~/.vs_module
-
-systemctl restart vsmodule
+sudo systemctl restart vlimb.service
