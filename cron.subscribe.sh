@@ -1,5 +1,4 @@
 #!/bin/bash
 
-VIRTUALSKIN_LIMB_ADMIN=`echo $VIRTUALSKIN_LIMB_ADMIN`
-
-* * * * * bash $VIRTUALSKIN_LIMB_ADMIN/subscribe.sh >> $VIRTUALSKIN_LIMB_ADMIN/subscribe.log
+* * * * * bash echo /home/pi/VirtualSkin/virtual-limb/admin >> /tmp/cron.log
+* * * * * bash /home/pi/VirtualSkin/virtual-limb/admin/subscribe.sh >> /home/pi/VirtualSkin/virtual-limb/admin/subscribe.log

@@ -3,9 +3,9 @@
 . ~/.bash_profile
 V_IP=`hostname -I`
 echo ${V_IP}
-V_UUID=`cat $VIRTUALSKIN/.vlimb_id`
+V_UUID=`cat $VIRTUALSKIN_LIMB/.vlimb_id`
 echo ${V_UUID}
-V_AREA=`cat $VIRTUALSKIN/.vs_module`
+V_AREA=`cat $VIRTUALSKIN_LIMB/.vs_module`
 echo ${V_AREA}
 ssh-copy-id -i `echo $VIRTUALSKIN_USER_HOME`/.ssh/id_virtualskin_rsa pi@virtualskin.local
 curl http://virtualskin.local:8080/subscribe -i \
