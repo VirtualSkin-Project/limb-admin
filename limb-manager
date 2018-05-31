@@ -9,10 +9,17 @@
 # Description:       Enable service provided by daemon.
 ### END INIT INFO
 
+[ -f /etc/default/limb-manager ] && . /etc/default/limb-manager
+
+if [ -z "$VIRTUALSKIN_LIMB_ADMIN" ] ;  then
+  echo "VIRTUALSKIN_LIMB_ADMIN is not set, please set it in /etc/default/limb-manager" >> /tmp/limb-manager.log
+  exit 1
+fi
+
 case "$1" in
 start)
    sleep 10
-   /home/pi/limb-admin/subscribe.sh
+   $VIRTUALSKIN_LIMB_ADMIN/subscribe.sh
    echo $!>/var/run/limb-manager.pid
    ;;
 stop)
